@@ -1,0 +1,16 @@
+{% extends "projects/base.html" %}
+{% block content %}
+    {% for project in projects %}
+    <article class="media content-section">
+        <div class="media-body">
+            <div class="article-metadata">
+                <a class="mr-2" href="#">{{ project.contractor }}</a><br>
+                <small class="text-muted">Inicio: {{ project.date_start }}</small><br>
+                <small class="text-muted">Finalización: {{ project.date_finish }}</small>
+            </div>
+            <h3><a class="article-title" href="#">{{ project.name }}</a></h3>
+            <p class="article-content">{{ project.scope }}</p>
+        </div>
+    </article>
+    {% endfor%}
+{% endblock content %}
